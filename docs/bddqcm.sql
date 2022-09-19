@@ -326,7 +326,13 @@ ALTER TABLE `question`
 -- AUTO_INCREMENT pour la table `reponse`
 --
 ALTER TABLE `reponse`
-  MODIFY `idReponse` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `idReponse` int(11) NOT NULL AUTO_INCR
+
+
+
+
+
+    EMENT, AUTO_INCREMENT=38;
 --
 -- Contraintes pour les tables déchargées
 --

@@ -12,6 +12,25 @@ class Etudiant
     private $email = "";
 
     /**
+     * @param int $idEtudiant
+     * @param string $login
+     * @param string $motDePasse
+     * @param string $nom
+     * @param string $prenom
+     * @param string $email
+     */
+    public function __construct(int $idEtudiant, string $login, string $motDePasse, string $nom, string $prenom, string $email)
+    {
+        $this->idEtudiant = $idEtudiant;
+        $this->login = $login;
+        $this->motDePasse = $motDePasse;
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->email = $email;
+    }
+
+
+    /**
      * @return int
      */
     public function getIdEtudiant(): int

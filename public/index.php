@@ -13,7 +13,13 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $route->addRoute('GET', '/', 'Quizz\Controller\HomeController');
     $route->addRoute('GET', '/lister', 'Quizz\Controller\Questionnaire\ListController');
     $route->addRoute('GET', '/detail/{id:\d+}', 'Quizz\Controller\Questionnaire\ViewController');
+    $route->addRoute('GET', '/etudiant', 'Quizz\Controller\etudiant\EtudiantsController');
+    $route->addRoute('POST', '/etudiant/add', 'Quizz\Controller\etudiant\addEtudiantController');
+    $route->addRoute('GET', '/etudiant/add', 'Quizz\Controller\etudiant\addEtudiantController');
 });
 // Dispatcher -> Couche view
 echo FastRouteCore::getDispatcher($dispatcher);
+//controller vient analiser les demandes htttp et en fonction de la demande va venir charger les bonnes classes de types controller
+// et von tfaire si besoin référence a un ou des models
 
+// pour mercredi faire un exemple de post de formulaire dan sla base de données
