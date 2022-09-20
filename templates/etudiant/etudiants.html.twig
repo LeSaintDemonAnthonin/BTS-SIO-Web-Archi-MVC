@@ -17,8 +17,8 @@
         <td>{{ value.getIdEtudiant }}</td>
         <td>{{ value.getNom }}</td>
         <td>{{ value.getPrenom }}</td>
-        <td> <a href="etudiant/update/{{ etudiant.getIdEtudiant }}">Mise a jour</a></td>
-        <td><br><a href="etudiant/delete/{{ etudiant.getIdEtudiant }}">Supprimer</td>
+        <td> <a href="/update/{{ etudiant.getIdEtudiant }}">Mise a jour</a></td>
+        <td><br><a href="/delete/{{ etudiant.getIdEtudiant }}">Supprimer</td>
     </tr>
 {% endfor %}
 </table>

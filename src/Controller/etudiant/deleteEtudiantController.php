@@ -17,7 +17,7 @@ class deleteEtudiantController implements  ControllerInterface
 
         if (isset($this->id)){
             return TwigCore::getEnvironment()->render(
-                'etudiant/deleteEtudiant.html.twig',[
+                'deleteEtudiant.html.twig',[
                     ]);
         }
         if ($this->delete == true){
