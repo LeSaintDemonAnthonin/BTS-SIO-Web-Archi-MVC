@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ etudiant.getIdEtudiant }}{% endblock %}
+
+{% block content %}
+    <div class="block">
+        <form method="post">
+            <label>nom Etudiant</label>
+            <h1></h1>
+            <input type="text" name="nom" >
+            <h1></h1>
+            <label>prenom Etudiant</label>
+            <h1></h1>
+            <input type="text" name="prenom">
+            <h1></h1>
+            <button type="submit" name="update">Mise a jour</button>
+        </form>
+    </div>
+{% endblock %}

@@ -22,7 +22,6 @@ class addEtudiantController implements ControllerInterface
         $addEtudiantModel = new addEtudiantModel();
         // je teste la variable GET /?id
         echo $twig->render('etudiant/addEtudiant.html.twig', [
-            //'addEtudiant' => $addEtudiantModel->insertEtudiant(),
             'add'=>$add
         ]);
     }

@@ -6,19 +6,19 @@
 <table>
     <tr>
         <th>ID etudiant</th>
-        <th>Login etudiant</th>
         <th>Nom etudiant</th>
         <th>Prenom etudiant</th>
-        <th>Email etudiant</th>
+        <th>Mise a jour informations etudiant</th>
+        <th>Supprimer etudiant</th>
     </tr>
     <label></label>
 {% for value in etudiants %}
     <tr>
         <td>{{ value.getIdEtudiant }}</td>
-        <td>{{ value.getLogin }}</td>
         <td>{{ value.getNom }}</td>
         <td>{{ value.getPrenom }}</td>
-        <td>{{ value.getEmail }}</td>
+        <td> <a href="etudiant/update/{{ etudiant.getIdEtudiant }}">Mise a jour</a></td>
+        <td><br><a href="etudiant/delete/{{ etudiant.getIdEtudiant }}">Supprimer</td>
     </tr>
 {% endfor %}
 </table>
