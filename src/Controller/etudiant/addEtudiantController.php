@@ -34,9 +34,10 @@ class addEtudiantController implements ControllerInterface
             /*$this->POSTER = $tabInput["POST"];
             $option = ['cost'=> 4];
             $pwd = password_hash($this->POSTER["motDePasse"],PASSWORD_BCRYPT,$option);
-            $etudiantModel = new addEtudiantModel();
             $pwd=$_POST["motDePasse"];*/
-            $etudiantModel->insertEtudiant();
+
+            $addEtudiantModel=new addEtudiantModel();
+            $addEtudiantModel->insertEtudiant();
         }
     }
 
