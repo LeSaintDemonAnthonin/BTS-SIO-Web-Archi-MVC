@@ -8,7 +8,6 @@ use Quizz\Model\deleteEtudiantModel;
 
 class deleteEtudiantController implements  ControllerInterface
 {
-    private $delete;
     private $idEtudiants;
 
     public function outputEvent()

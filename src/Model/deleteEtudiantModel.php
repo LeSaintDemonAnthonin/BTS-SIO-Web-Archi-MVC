@@ -13,9 +13,11 @@ class deleteEtudiantModel
         $this->bdd=DatabaseService::getConnect();
     }
 
-    public function deleteEtudiant(int $id){
+    public function deleteEtudiant(int $idEtudiant){
         $requete=$this->bdd->prepare('DELETE FROM etudiants 
             WHERE idEtudiant ='. $id);
         $requete->execute();
     }
 }
+
+
