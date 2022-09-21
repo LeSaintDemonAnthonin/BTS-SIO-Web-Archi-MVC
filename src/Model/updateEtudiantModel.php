@@ -15,9 +15,9 @@ class updateEtudiantModel
         $this->bdd= DatabaseService::getConnect();
     }
 
-    public function updateEtudiant(string $nom,string $prenom,int $idEtudiant){
+    public function updateEtudiant(string $nom,string $prenom,string $email,string $login ,string $motDePasse,int $idEtudiant){
         $requete = $this->bdd->prepare("UPDATE etudiants
-            SET nom = '".$nom."', prenom = '".$prenom."'
+            SET nom = '".$nom."', prenom = '".$prenom."', email = '".$email."', login = '".$login."',motDePasse = '".$motDePasse."'
             WHERE idEtudiant = ". $idEtudiant.";");
         $requete->execute();
     }

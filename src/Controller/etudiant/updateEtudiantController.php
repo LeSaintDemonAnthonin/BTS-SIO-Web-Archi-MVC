@@ -18,7 +18,8 @@ class updateEtudiantController implements ControllerInterface
             $this->POST = $tabInput["POST"];
             $updateEtudiantModel = new updateEtudiantModel();
             $updateEtudiantModel->updateEtudiant($this->POST["nom"]
-                ,$this->POST["prenom"],$this->id);
+                ,$this->POST["prenom"],$this->id , $this->POST["email"]
+                ,$this->POST["motDePasse"]);
         }
     }
 

@@ -9,19 +9,26 @@ use Quizz\Model\deleteEtudiantModel;
 class deleteEtudiantController implements  ControllerInterface
 {
     private $delete;
+    private $idEtudiants;
 
     public function outputEvent()
     {
+        if (isset($tabInput["VARS"]["id"])){
+            $this->idEtudiants = $tabInput["VARS"]["id"];
+        }
         $deleteEtudiantModel = new deleteEtudiantModel();
 
 
-        if (isset($this->id)){
+        if (isset($this->idEtudiants)){
             return TwigCore::getEnvironment()->render(
                 'deleteEtudiant.html.twig',[
                     ]);
         }
-        if ($this->delete == true){
-            header('Location:/etudiant');
-        }
+
+    }
+    public function inputRequest(array $tabInput)
+    {
+        // TODO: Implement setInput() method.
+
     }
 }
