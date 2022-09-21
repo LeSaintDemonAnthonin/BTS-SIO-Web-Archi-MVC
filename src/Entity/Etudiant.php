@@ -19,15 +19,6 @@ class Etudiant
      * @param string $prenom
      * @param string $email
      */
-    public function __construct(int $idEtudiant, string $login, string $motDePasse, string $nom, string $prenom, string $email)
-    {
-        $this->idEtudiant = $idEtudiant;
-        $this->login = $login;
-        $this->motDePasse = $motDePasse;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->email = $email;
-    }
 
 
     /**

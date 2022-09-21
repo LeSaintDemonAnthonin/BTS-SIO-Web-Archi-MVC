@@ -9,30 +9,32 @@ use Quizz\Model\updateEtudiantModel;
 class updateEtudiantController implements ControllerInterface
 {
     private $idEtudiant;
+    private $postData;
     public function inputRequest(array $tabInput)
     {
+       /* var_dump($tabInput);
+        var_dump($tabInput["VARS"]["id"]);*/
         if (isset($tabInput["VARS"]["id"])){
             $this->idEtudiant = $tabInput["VARS"]["id"];
         }
         if (!empty($tabInput["POST"])){
-            $this->POST = $tabInput["POST"];
-            $updateEtudiantModel = new updateEtudiantModel();
-            $updateEtudiantModel->updateEtudiant($this->POST["nom"]
-                ,$this->POST["prenom"],$this->idEtudiant , $this->POST["email"]
-                ,$this->POST["motDePasse"]);
+            $this->postData = $tabInput["POST"];
         }
+
+
     }
 
     public function outputEvent()
     {
 
 
-        if (isset($this->id)){
+        if (isset($this->idEtudiant)){
+            $updateEtudiantModel = new updateEtudiantModel();
         return TwigCore::getEnvironment()->render(
-                'updateEtudiant.html.twig',[
+                '/etudiant/updateEtudiant.html.twig',[
                 'etudiant' => $updateEtudiantModel->getFetchId((int) $this->idEtudiant)
-            ]);}
+            ]);
+        }
 
     }
-
 }
