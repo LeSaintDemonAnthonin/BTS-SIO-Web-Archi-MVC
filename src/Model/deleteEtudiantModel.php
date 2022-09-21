@@ -15,7 +15,7 @@ class deleteEtudiantModel
 
     public function deleteEtudiant(int $idEtudiant){
         $requete=$this->bdd->prepare('DELETE FROM etudiants 
-            WHERE idEtudiant ='. $id);
+            WHERE idEtudiant ='. $idEtudiant);
         $requete->execute();
     }
 }
